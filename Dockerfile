@@ -1,14 +1,12 @@
 # WEB cервер 1С 8.3
 #
-# https://geektimes.ru/post/268926/
-FROM debian:jessie-slim
-ENV DIST server64_8_3_20_1914
+FROM debian:bullseye-slim
+ENV DIST server64_8_3_22_1750
 
 RUN apt-get update && apt-get install -y \
 	apache2 \
 	locales \
-	wget \
-	nano
+	wget 
 
 RUN locale-gen ru_RU.UTF-8  
 ENV LANG ru_RU.UTF-8 UTF-8  
