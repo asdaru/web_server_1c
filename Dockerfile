@@ -2,10 +2,10 @@
 #
 FROM debian:stable-slim
 
-ENV DIST=server64_8_3_24_1667.zip
+ENV DIST=server64_8_3_25_1394.zip
 
 RUN apt-get update && apt-get install -y \
-	wget unzip locales \
+	wget unzip locales apache2 \
 	&& rm -rf /var/lob/apt/lists/*
 
 RUN wget https://storage.yandexcloud.net/pridex.backup/distr/${DIST} -P /tmp --no-check-certificate | wc -l > /number
