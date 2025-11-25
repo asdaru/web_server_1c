@@ -2,7 +2,7 @@
 #
 FROM debian:stable-slim
 
-ENV DIST=server64_8_3_25_1560.zip
+ENV DIST=server64_8_3_27_1719.zip
 
 RUN apt-get update && apt-get install -y \
 	wget unzip locales apache2 \
